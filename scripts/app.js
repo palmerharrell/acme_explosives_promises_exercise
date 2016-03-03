@@ -11,12 +11,13 @@
 // Each product must display the string name of its product type, and product category,
 // not the integer id value.
 
-var categories = [];
-var types = [];
-var products = [];
+let categories = [];
+let types = [];
+let products = [];
+let categoriesHTML = ``;
 
 // Process AJAX requests
-var loadCategories = function() {
+let loadCategories = function() {
   return new Promise((resolve, reject) => {
   	$.ajax({url:"./jsonFiles/categories.json"}).done(function(catsObj) {
   		resolve(catsObj);
@@ -24,7 +25,7 @@ var loadCategories = function() {
   });
 };
 
-var loadTypes = function() {
+let loadTypes = function() {
   return new Promise((resolve, reject) => {
   	$.ajax({url:"./jsonFiles/types.json"}).done(function(typesObj) {
   		resolve(typesObj);
@@ -32,17 +33,18 @@ var loadTypes = function() {
   });
 };
 
-var loadProducts = function() {
-  return new Promise(() => {
+let loadProducts = function() {
+  return new Promise((resolve, reject) => {
   	$.ajax({url:"./jsonFiles/products.json"}).done(function(prodsObj) {
   		products = prodsObj.products;
+  		resolve();
   	});
   });
 };
 
 
 // Reject Function
-var handleRejection = function() {
+let handleRejection = function() {
 	console.log("Promise Rejected");
 };
 
@@ -59,12 +61,29 @@ function loadJSON() {
 	    types = jsonObj.types;
 	    return loadProducts();
 	  }, handleRejection
+	).then(
+	  function () {
+	  	// Populate Category Select with available categories
+			for (let i = 0; i < categories.length; i++) {
+				categoriesHTML += `<option value="${categories[i].name}">${categories[i].name}</option>`;
+			}
+			$("#categories").html(categoriesHTML);
+	  }, handleRejection
 	);
 }
 
 loadJSON();
 
+
+
 // Event Listener
+
+$("#categories").change(function(){
+	console.log("changed");
+});
+
+
+
 
 
 
