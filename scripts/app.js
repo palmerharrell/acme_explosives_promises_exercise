@@ -67,7 +67,7 @@ function loadJSON() {
 			for (let i = 0; i < categories.length; i++) {
 				categoriesHTML += `<option value="${categories[i].name}">${categories[i].name}</option>`;
 			}
-			$("#categories").html(categoriesHTML);
+			$("#categories").append(categoriesHTML);
 	  }, handleRejection
 	);
 }
