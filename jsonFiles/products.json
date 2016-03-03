@@ -2,9 +2,129 @@
   "products": [
     {
       "id": 0,
-      "type": 0,
+      "type": 2,
       "name": "Fairy Sparklers",
       "description": "Multi-colored sparklers that are safe for any age."
+    },
+
+    {
+      "id": 1,
+      "type": 2,
+      "name": "Ogre Sparklers",
+      "description": "Green sparklers that are unsafe for most."
+    },
+
+    {
+      "id": 2,
+      "type": 2,
+      "name": "Bottle Rocket",
+      "description": "Regular old bottle rockets."
+    },
+
+    {
+      "id": 3,
+      "type": 0,
+      "name": "Christmas Cannon",
+      "description": "Powerful Christmas-themed mortar."
+    },
+
+    {
+      "id": 4,
+      "type": 0,
+      "name": "Pumpkin Bomb",
+      "description": "Giant orange explosion."
+    },
+
+    {
+      "id": 5,
+      "type": 0,
+      "name": "Easter Rocket",
+      "description": "Regular old bottle rockets... for Easter."
+    },
+
+    {
+      "id": 6,
+      "type": 1,
+      "name": "Black Death",
+      "description": "Hard to see at night."
+    },
+
+    {
+      "id": 7,
+      "type": 1,
+      "name": "Coffin Sparklers",
+      "description": "For use around the base of a casket."
+    },
+
+    {
+      "id": 8,
+      "type": 1,
+      "name": "Cirle of Life",
+      "description": "Spinning celebration of life."
+    },
+
+    {
+      "id": 9,
+      "type": 3,
+      "name": "Mega Boom",
+      "description": "For knocking down the largest buildings."
+    },
+
+    {
+      "id": 10,
+      "type": 3,
+      "name": "Medium Bang",
+      "description": "For regular-sized buildings."
+    },
+
+    {
+      "id": 11,
+      "type": 3,
+      "name": "Mini Nuke",
+      "description": "For dog and bird houses."
+    },
+
+    {
+      "id": 12,
+      "type": 4,
+      "name": "Interstate Rocket",
+      "description": "For wiping out interstate roads."
+    },
+
+    {
+      "id": 13,
+      "type": 4,
+      "name": "Highway Sparkler",
+      "description": "For tearing up highways."
+    },
+
+    {
+      "id": 14,
+      "type": 4,
+      "name": "Dirt Road Bomb",
+      "description": "For clearing dirt roads."
+    },
+
+    {
+      "id": 15,
+      "type": 5,
+      "name": "Titanic Buster",
+      "description": "Blow up the largest ships."
+    },
+
+    {
+      "id": 16,
+      "type": 5,
+      "name": "Sailboat Flare",
+      "description": "Burn down your sailboat."
+    },
+
+    {
+      "id": 17,
+      "type": 5,
+      "name": "Tugboat Buster",
+      "description": "No more tugboat."
     }
+
   ]
 }

@@ -3,8 +3,44 @@
     {
       "id": 0,
       "category": 0,
-      "name": "personal",
+      "name": "Holiday Fireworks",
       "description": "Fireworks intended for recreational use during holiday celebrations"
+    },
+
+    {
+      "id": 1,
+      "category": 0,
+      "name": "Funeral Fireworks",
+      "description": "Fireworks intended for funerals"
+    },
+
+    {
+      "id": 2,
+      "category": 0,
+      "name": "Every Day Fireworks",
+      "description": "Fireworks intended for every day"
+    },
+
+    {
+      "id": 3,
+      "category": 1,
+      "name": "Building Demolition",
+      "description": "Explosives for blowing up buildings"
+    },
+
+    {
+      "id": 4,
+      "category": 1,
+      "name": "Road Demolition",
+      "description": "Explosives for destroying roads"
+    },
+
+    {
+      "id": 5,
+      "category": 1,
+      "name": "Boat Demolition",
+      "description": "Explosives for blowing up boats"
     }
+
   ]
 }
