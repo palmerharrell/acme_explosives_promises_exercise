@@ -1,10 +1,5 @@
 "use strict";
 
-// Create a simple user interface for your product catalog where a user can select
-// a category from a dropdown.
-
-// When a category is selected, you must use Promises to read, first, from the categories.json
-// to load that array of objects, then load types.json, then products.json.
 
 // Once all data is loaded, you need to display the products in a Bootstrap grid.
 
@@ -15,6 +10,7 @@ let categories = [];
 let types = [];
 let products = [];
 let categoriesHTML = ``;
+let productsHTML = ``;
 
 // Process AJAX requests
 let loadCategories = function() {
@@ -72,6 +68,23 @@ function loadJSON() {
 	);
 }
 
+
+// Populate .all_products div
+function populateProducts(selProducts, selTypes, selCategory) {
+
+	for (let i = 0; i < selProducts.length; i++) {
+		var currentType = selTypes.filter(function(obj) {
+  		return obj.id == selProducts[i].type;
+		});
+
+		console.log(selProducts[i].name);
+		console.log(currentType[0].name);
+		console.log("Category:", selCategory);
+		console.log("~~~~~~~~~~~~~~~~~");
+
+	}
+}
+
 loadJSON();
 
 
@@ -79,8 +92,40 @@ loadJSON();
 // Event Listener
 
 $("#categories").change(function(){
-	console.log("changed");
+
+	let selectedCategory = $("#categories").val();
+	let categoryID = null;
+	let matchingTypes = [];
+	let matchingProducts = [];
+
+	for (let i = 0; i < categories.length; i++) {
+		if (selectedCategory === categories[i].name) {
+			categoryID = categories[i].id;
+		}
+	}
+
+	for (let i = 0; i < types.length; i++) {
+		if (categoryID === types[i].category) {
+			matchingTypes.push(types[i]);
+		}
+	}
+
+	for (let i = 0; i < products.length; i++) {
+		for (let j = 0; j < matchingTypes.length; j++) {
+			if (products[i].type == matchingTypes[j].id) {
+				matchingProducts.push(products[i]);
+			}
+		}
+	}
+	populateProducts(matchingProducts, matchingTypes, selectedCategory);
 });
+
+
+
+
+
+
+
 
 
 
